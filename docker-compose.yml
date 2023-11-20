@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  frontend:
+    image: appletreecy/dockerchatgptclient:latest
+    working_dir: /usr/src/app
+    ports:
+      - "5173:5173"
+    container_name: chatgpt_frontend1
+    #command: npm run dev
+
+
+  backend:
+    image: appletreecy/dockerchatgptserver:1.0
+    working_dir: /usr/src/app
+    ports:
+      - "5000:5000"
+    container_name: chatgpt_backend1
+
+
